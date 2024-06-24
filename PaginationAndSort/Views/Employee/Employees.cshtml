@@ -1,0 +1,85 @@
+﻿@model PaginationAndSort.Models.EmployeeViewModel
+
+@{
+    ViewData["Title"] = "AddEmployee";
+}
+
+<h1>AddEmployee</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<h2>Employee</h2>
+<form asp-action="Employees">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-8">
+                <input name="term" class="form-control" placeholder="Search By Name" />
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-info">Search</button>
+            </div>
+        </div>
+    </div
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a href="/Employee/Employees?orderBy=@Model.NameSort">Name</a>
+            </th>
+             <th>
+                <a href="/Employee/Employees?orderBy=@Model.EmailSort">Email</a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var item in Model.Employees) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+        @if (Model.CurrentPage > 1)
+        {
+          <li class="page-item">
+      <a class="page-link" href="/Employee/Employees?term=@Model.Term&orderBy=@Model.OrderBy&currentPage=@(Model.CurrentPage-1)" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>   
+        }
+        @for(int i=1;i <= Model.TotalPages; i++)
+        {
+            if (i == Model.CurrentPage)
+            {
+                <li class="page-item"><a class="page-link" active href="/Employee/Employees?term=@Model.Term&orderBy=@Model.OrderBy&currentPage=@i">@i</a></li>
+            }
+            else
+            {
+                 <li class="page-item"><a class="page-link" href="/Employee/Employees?term=@Model.Term&orderBy=@Model.OrderBy&currentPage=@i">@i</a></li>
+            }
+        }
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <li class="page-item">
+      <a class="page-link" href="/Employee/Employees?term=@Model.Term&orderBy=@Model.OrderBy&currentPage=@(Model.CurrentPage+1)" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+        }
+    </ul>
+</nav>

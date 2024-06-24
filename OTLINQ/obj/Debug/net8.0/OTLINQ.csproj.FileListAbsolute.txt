@@ -1,0 +1,14 @@
+D:\OTASP\OTLINQ\bin\Debug\net8.0\OTLINQ.exe
+D:\OTASP\OTLINQ\bin\Debug\net8.0\OTLINQ.deps.json
+D:\OTASP\OTLINQ\bin\Debug\net8.0\OTLINQ.runtimeconfig.json
+D:\OTASP\OTLINQ\bin\Debug\net8.0\OTLINQ.dll
+D:\OTASP\OTLINQ\bin\Debug\net8.0\OTLINQ.pdb
+D:\OTASP\OTLINQ\obj\Debug\net8.0\OTLINQ.GeneratedMSBuildEditorConfig.editorconfig
+D:\OTASP\OTLINQ\obj\Debug\net8.0\OTLINQ.AssemblyInfoInputs.cache
+D:\OTASP\OTLINQ\obj\Debug\net8.0\OTLINQ.AssemblyInfo.cs
+D:\OTASP\OTLINQ\obj\Debug\net8.0\OTLINQ.csproj.CoreCompileInputs.cache
+D:\OTASP\OTLINQ\obj\Debug\net8.0\OTLINQ.dll
+D:\OTASP\OTLINQ\obj\Debug\net8.0\refint\OTLINQ.dll
+D:\OTASP\OTLINQ\obj\Debug\net8.0\OTLINQ.pdb
+D:\OTASP\OTLINQ\obj\Debug\net8.0\OTLINQ.genruntimeconfig.cache
+D:\OTASP\OTLINQ\obj\Debug\net8.0\ref\OTLINQ.dll
